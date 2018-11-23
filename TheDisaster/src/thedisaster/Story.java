@@ -119,6 +119,7 @@ public class Story {
                 + "次へ進もう。▼");
     }
     public static void choice1(){
+        System.out.println("選択ステージ１");
          System.out.println(""
                 + "このダンジョンでは昔ながらのダンジョンみたいに\n"
                 + "武器や回復アイテムが落ちているだろう▼");
@@ -144,6 +145,7 @@ public class Story {
 
     }
     public static void specialenpai(){
+        System.out.println("810");
         System.out.println("……▼");
         scan.nextLine();
         
@@ -178,6 +180,7 @@ public class Story {
         scan.nextLine();
     }
     public static void stage1(){
+        System.out.println("戦闘ステージ１");
         System.out.println(""
                 + "エクスシア「どうやら抜け駆けは失敗したらしい。」\n"
                 + "スローネ「嗚呼、どちらが先に封印するのか賭けていたのに。この場合どうするよ？」▼");
@@ -256,7 +259,7 @@ public class Story {
                 + "しかし...道が分かれているな\n"
                 + "どちら進む、貴様の『決意』にゆだねる。▼");
         scan.nextLine();
-        System.out.println("1.ステージ２ , 2. 選択２");
+        System.out.println("1.ステージ2 , 2. 選択2");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
         stage2();
         } else {
@@ -265,6 +268,7 @@ public class Story {
         }
     
     public static void stage2(){
+        System.out.println("戦闘ステージ２");
         System.out.println(""
                 + "マールート「キヒヒヒヒ！！崩ス者ノ登場サ！」\n"
                 + "ハールート「やぁ、初めまして。災害。」▼");
@@ -335,6 +339,7 @@ System.out.println("1. " + wepon_theElderWand.GetName() + ", 2. 回復アイテ�
         }
     }
     public static void choice2(){ 
+        System.out.println("選択ステージ２");
         System.out.println(""
                 + "ここには敵がいないようだな…。\n"
                 + "フライパンが落ちているな。▼");
@@ -367,6 +372,7 @@ System.out.println(""
         }
     }
     public static void choice3(){
+        System.out.println("選択ステージ３");
      System.out.println(""
                 + "これはマスケット銃か！\n"
                 + "私がいた時代には無かった武器だ。▼");
@@ -400,6 +406,7 @@ System.out.println(""
         }
     }
     public static void stage3(){
+        System.out.println("戦闘ステージ３");
         System.out.println(""
                 + "アストライアー「来たぞ。気合入れろよお前ら。」\n"
                 + "ラジエル「ここが正念場ってくらい心得てますよ、頭。」▼");
@@ -499,6 +506,7 @@ System.out.println(""
         }
     }
     public static void security(){
+        System.out.println("セキュリティステージ");
         System.out.println(""
                 + "これはなんだ…?\n"
                 + "私の知っている言語ではない…。▼");
@@ -513,6 +521,7 @@ System.out.println(""
         scan.nextLine();
     }
     public static void lastBattle(){
+        System.out.println("ラストステージ");
         System.out.println(""
                 + "戦乙女「ついに私のところまでたどり着いたか、"+ DisasterName +"\n"
                 + "私はこのダンジョンで君を待っていた戦乙女のグリムゲルデという者だ。");
@@ -567,6 +576,7 @@ System.out.println(""
 
     }
     public static void epilogue(){
+        System.out.println("エピローグ");
         System.out.println(""
                 + "貴様は私をこのダンジョンから出すという決意をしてくれた。\n"
                 + "私だけでは目覚めることすらできず封印されていただろう。▼");
@@ -650,6 +660,7 @@ System.out.println(""
 
     }
     public static void specialVictory(){
+        System.out.println("特殊勝利ステージ");
         System.out.println(""
                 + "それが貴様の選択か…ならば受け入れよう。\n"
                 + "それが"+ DisasterName +"としての決断だ…。▼");
@@ -690,6 +701,7 @@ System.out.println(""
                 + "私を英雄にさせろ！"+ DisasterName +"！」▼\n"
                 + "");
         scan.nextLine();
+        System.out.println("エピローグ");
         System.out.println(""
                 + "\n"
                 + "制作スタッフ▼");
