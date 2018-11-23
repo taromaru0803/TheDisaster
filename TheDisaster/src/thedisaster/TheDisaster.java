@@ -2,6 +2,7 @@ package thedisaster;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -33,43 +34,40 @@ public class TheDisaster {
 
     public static void main(String[] args) {
         init(); //初期化
-        //Story.Openning(); //オープニング
+        Story.Openning(); //オープニング
         PutDisasterName(); //名前決定
         DamageOverTime(); //HP減少開始
-        //Story.Tutorial(); //チュートリアル
-        //BattleWithMessiah(); //制作中
+        
+        Story.Tutorial(); //チュートリアル
         Story.TutorialBattleAfter(); //チュートリアル戦後
-
+        
         Story.choice1(); //選択1
-        System.out.println("1. " + wepon_knife.GetName() + ", 2. 回復アイテム");
-        if (TwoChoices("1", "2").equals("1")) {
-            System.out.println("装備しますか (y/n) (現在の装備 : " + Disaster.getWepon() + ")");
-
-            if (TwoChoices("y", "n").equals("y")) {
-                System.out.println(wepon_knife.GetName() + "を装備しました");
-                Disaster.SetWepon(wepon_knife.GetName());
-            } else {
-                System.out.println("");
-            }
-        } else {
-            System.out.println("回復しますか? (y/n) (現在のHP :" + Disaster.getHP() + ")");
-
-            if (TwoChoices("y", "n").equals("y")) {
-                System.out.println("回復しました");
-            } else {
-                System.out.println("回復しませんでした");
-            }
-            System.out.println("現在のHP : " + Disaster.getHP());
-        }
-        Story.Senpai();
+        //分岐 810 or ステージ1
+        
+        Story.stage1(); //ステージ1
+        Story.stage1After(); //ステージ1戦後
+        //分岐 ステージ2 or choice2
+        
+        Story.choice3(); //choice3
+        
+        Story.stage3(); //ステージ3
+        Story.stage3After(); //ステージ3戦後
+        
+        Story.security(); //イージマス前
+        EasyMass(); //イージマス
+        
+        Story.lastBattle(); //ラスト前
+        Story.lastBattleAfter(); //ラスト後
+        
+        Story.epilogue(); //エンディング
     }
 
     private static void init() {
 
-        heal_low = new Item("小回復", 10);
-        heal_medium = new Item("中回復", 20);
-        heal_high = new Item("大回復", 30);
-        heal_veryHigh = new Item("特大回復", 150);
+        heal_low = new Item("小回復", 20);
+        heal_medium = new Item("中回復", 40);
+        heal_high = new Item("大回復", 60);
+        heal_veryHigh = new Item("特大回復", 200);
 
         grimgerde = new Grim("Grimgerde", 10000);
 
@@ -114,20 +112,97 @@ public class TheDisaster {
         Disaster = new Character(DisasterName, 2000, "なし");
     }
 
+    public static void EasyMass() {
+        System.out.println(""
+                + "※簡単な数学の問題が5問表示されます\n"
+                + "※回答を入力してください▼");
+        scan.nextLine();
+
+        System.out.println(""
+                + "※回答を間違えると体力が減少します\n"
+                + "※正解するまで問題が変わることはありません▼");
+        scan.nextLine();
+
+        System.out.println("START▼");
+
+        Random rand = new Random();//ランダムメソッド
+        int[] num = new int[2];//ランダム値保存用
+        int ans = 0;//答え保存用
+        int sisoku = 0;//四則種類選択用
+        String question = null;//問題内容保存用
+        char loop = 0;//繰り返し回数保存用
+        char i;//繰り返し回数一時保存用
+        do {//do/while文で３問繰り返す
+            for (i = 0; i < 2; i++) {//２つの数値を保存
+                int q = rand.nextInt(12);
+                num[i] = q;
+            }
+            sisoku = rand.nextInt(3);//ランダムに＋ー×÷を選択
+            switch (sisoku) {
+                case 0:
+                    ans = num[0] + num[1];
+                    question = "+";
+                    break;
+                case 1:
+                    ans = num[0] - num[1];
+                    question = "-";
+                    break;
+                case 2:
+                    ans = num[0] * num[1];
+                    question = "×";
+                    break;
+            }
+            question = "[第" + String.valueOf(loop + 1) + "問]" + String.valueOf(num[0]) + question + String.valueOf(num[1]) + "=";
+            System.out.println(question);
+            boolean correct = true;
+            while (correct) {
+                try {
+                    String str = scan.nextLine();
+                    if (str.equals(String.valueOf(ans))) {
+                        System.out.println("正解");
+                        correct = false;
+                    } else {
+                        System.out.println("不正解");
+                        Disaster.SetHP(-10);
+                    }
+                } catch (Exception e) {
+                }
+            }
+            loop++;
+        } while (loop < 5);
+        System.out.println("セキュリティーチェック完了");
+        System.out.println("HP : " + Disaster.getHP());
+    }
+
     /**
      * 武器の装備(確認)を行うメソッド
      *
-     * @param wepon 武器 
+     * @param wepon 武器
      */
     public static void EquipWeapon(Item wepon) {
-        System.out.println(wepon + "を装備しますか? (y/n) (現在の装備 : " + Disaster.getWepon() + ")");
+        System.out.println(wepon.GetName() + "を装備しますか? (y/n) (現在の装備 : " + Disaster.getWepon() + ")");
 
         if (TwoChoices("y", "n").equals("y")) {
-            System.out.println(wepon.GetName() + "を装備しました");
+            System.out.println(wepon.GetName() + "を装備しました▼");
             Disaster.SetWepon(wepon.GetName());
         } else {
-            System.out.println(wepon.GetName() + "を装備しませんでした");
+            System.out.println(wepon.GetName() + "を装備しませんでした▼");
         }
+        scan.nextLine();
+    }
+
+    public static void Healer(Item healItem) {
+        System.out.println("体力を回復しますか? (y/n) (現在の体力 : " + Disaster.getHP() + ")");
+
+        if (TwoChoices("y", "n").equals("y")) {
+            Disaster.SetHP(healItem.GetValue());
+
+            System.out.println("体力を回復しました\n"
+                    + "現在の体力 : " + Disaster.getHP() + " ▼");
+        } else {
+            System.out.println("体力を回復しませんでした▼");
+        }
+        scan.nextLine();
     }
 
     /**
@@ -138,7 +213,7 @@ public class TheDisaster {
      * @return 選択結果
      */
     public static String TwoChoices(String Choice1, String Choice2) {
-        boolean roop;   
+        boolean roop;
         do {
             roop = false;
             String input = scan.nextLine();
