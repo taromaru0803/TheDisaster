@@ -252,7 +252,18 @@ public class Story {
                 + "そろそろ要領は掴んだだろう。\n"
                 + "貴様のやることは何ら変わることはない。▼");
         scan.nextLine();
+        System.out.println(""
+                + "しかし...道が分かれているな\n"
+                + "どちら進む、貴様の『決意』にゆだねる。▼");
+        scan.nextLine();
+        System.out.println("1.ステージ２ , 2. 選択２");
+        if (TheDisaster.TwoChoices("1", "2").equals("1")) {
+        stage2();
+        } else {
+            choice2();
     }
+        }
+    
     public static void stage2(){
         System.out.println(""
                 + "マールート「キヒヒヒヒ！！崩ス者ノ登場サ！」\n"
@@ -330,7 +341,7 @@ System.out.println("1. " + wepon_theElderWand.GetName() + ", 2. 回復アイテ�
         scan.nextLine();
 System.out.println(""
                 + "金属で作られている割には軽いな。\n"
-                + "▼");
+                + "...");
         scan.nextLine();
 System.out.println(""
                 + "武器ではないが、このフライパンで殴れば相応の痛みは与えられることができるだろう。\n"
@@ -338,14 +349,14 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "回復アイテムも落ちているがどちらを取るか…。\n"
-                + "こんな時こそお前の出番だ。▼");
+                + "こんな時こそお前の『決意』の出番だ。▼");
         scan.nextLine();
 System.out.println(""
                 + "フライパンと回復アイテムどちらを選ぶ？\n"
                 + ""+ DisasterName +"にとって大事だと思う方を選んで欲しい。▼");
         scan.nextLine();
 System.out.println(""
-                + "どちらを取るかを決めるのはお前だ。\n"
+                + "どちらを取るかを決めるのはお前『決意』だ。\n"
                 + ""+ DisasterName +"はどちらを選ぶ？▼");
         scan.nextLine();
         System.out.println("1. " + wepon_FryingPanOfMagic.GetName() + ", 2. 回復アイテム");
@@ -477,7 +488,7 @@ System.out.println(""
                 + "まぁ、せいぜい…お前も楽しみな…。運命を……。」▼");
         scan.nextLine();
 System.out.println(""
-                + "行くぞ。\n"
+                + "選択の時間を行くぞ。\n"
                 + "ここからが本番だ。▼");
         scan.nextLine();
          System.out.println("1. " + wepon_waterGun.GetName() + ", 2. 回復アイテム");
@@ -516,7 +527,7 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "死んでいったメサイア達も戦乙女が打倒した災害に殺された\n"
-                + "とあればヴァルハラに連れて行くにはいい理由になる。▼");
+                + "とあればヴァルハラに連れて行くにはいい理由になる。");
         scan.nextLine();
 System.out.println(""
                 + "私はここで時間を稼げば勝ち。君は私を倒さなくては負け。\n"
@@ -547,11 +558,11 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "まあいい、目的は達成できた。\n"
-                + ""+ DisasterName +"、きみはここから外に出るがいい▼");
+                + ""+ DisasterName +"、きみはここから外に出るがいい");
         scan.nextLine();
 System.out.println(""
                 + "しかしここは君のいた時代も場所も違う\n"
-                + "君に耐えられるかな？▼");
+                + "君に耐えられるかな？」▼");
         scan.nextLine();
 
     }
@@ -574,11 +585,11 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "C0116127 佐藤瑠星\n"
-                + "C0116168 立野和紀▼");
+                + "C0116168 立野和紀");
         scan.nextLine();
 System.out.println(""
                 + "C0116272 山口雄也\n"
-                + "C0116334 ザイダトゥル アクマル▼");
+                + "C0116334 ザイダトゥル アクマル");
         scan.nextLine();
 System.out.println(""
                 + "\n"
@@ -618,7 +629,7 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "災害の私も語り継ぐ者がいなければ滅んでしまう存在だ。\n"
-                + "　　　                                     ▼");
+                + "");
         scan.nextLine();
 System.out.println(""
                 + "果たして人間は私にとって倒すべき存在だったのだろうか？\n"
@@ -677,7 +688,7 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "私を英雄にさせろ！"+ DisasterName +"！」▼\n"
-                + "                                 ");
+                + "");
         scan.nextLine();
         System.out.println(""
                 + "\n"
@@ -693,14 +704,14 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "\n"
-                + "▼");
+                + "");
         scan.nextLine();
 System.out.println(""
                 + "・・・\n"
-                + "・・・・・▼");
+                + "・・・・・");
         System.out.println(""
                 + "・・・・・・・\n"
-                + "・・・・・・・・・・・？▼");
+                + "・・・・・・・・・・・？");
         scan.nextLine();
 System.out.println(""
                 + "私の声が聞こえているか？\n"
@@ -747,16 +758,16 @@ System.out.println(""
         scan.nextLine();
 System.out.println(""
                 + "\n"
-                + "▼");
+                + "");
         scan.nextLine();
 
 System.out.println(""
                 + "\n"
-                + "▼");
+                + "");
         scan.nextLine();
 System.out.println(""
                 + "\n"
-                + "▼");
+                + "");
         scan.nextLine();
 
 System.out.println(""
@@ -834,7 +845,16 @@ System.out.println(""
                 + "じゃあな。\n"
                 + "あなたは1919361ダメージを受けた。▼");
         scan.nextLine();
-
+public static void Senpai4(){
+    System.out.println(""
+                + "4を選んだか\n"
+                + "ここまでで相当萎えてるな?▼");
+        scan.nextLine();
+    System.out.println(""
+                + "\n"
+                + "");
+        scan.nextLine();
+    }
 
 
       }
