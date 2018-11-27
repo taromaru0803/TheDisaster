@@ -5,7 +5,7 @@ import static thedisaster.TheDisaster.*;
 /*
  * Story.java
  * ストーリーの内容がここにまとまっています。
- * @author 山口
+ * @author 山口雄也
  */
 public class Story {
 
@@ -120,7 +120,9 @@ public class Story {
     }
 
     public static void choice1() {
-        System.out.println("選択ステージ１");
+        System.out.println("選択ステージ１▼");
+        scan.nextLine();
+        
         System.out.println(""
                 + "このダンジョンでは昔ながらのダンジョンみたいに\n"
                 + "武器や回復アイテムが落ちているだろう▼");
@@ -137,13 +139,7 @@ public class Story {
                 + "今回の武器はナイフか。\n"
                 + "さあナイフと回復アイテムどちらを選ぶ？▼");
         scan.nextLine();
-        System.out.println("1. " + wepon_knife.GetName() + ", 2. 回復アイテム");
-        if (TheDisaster.TwoChoices("1", "2").equals("1")) {
-            TheDisaster.EquipWeapon(wepon_knife);
-        } else {
-            TheDisaster.Healer(heal_low);
-        }
-
+        System.out.println("1. " + weapon_knife.GetName() + ", 2. 回復アイテム");
     }
 
     public static void specialenpai() {
@@ -175,7 +171,7 @@ public class Story {
                 + "おもちゃのナイフがある\n"
                 + "どうする？▼");
         scan.nextLine();
-        TheDisaster.EquipWeapon(wepon_toyKnife);
+        TheDisaster.EquipWeapon(weapon_toyKnife);
         System.out.println(""
                 + "家を出た。\n"
                 + "なんだったんだあいつは…?▼");
@@ -264,11 +260,6 @@ public class Story {
                 + "どちら進む、貴様の『決意』にゆだねる。▼");
         scan.nextLine();
         System.out.println("1.ステージ2 , 2. 選択2");
-        if (TheDisaster.TwoChoices("1", "2").equals("1")) {
-            stage2();
-        } else {
-            choice2();
-        }
     }
 
     public static void stage2() {
@@ -334,9 +325,9 @@ public class Story {
                 + "愚問だったな。私達" + DisasterName + "には敵などいない。\n"
                 + "武器かアイテムを拾って先に進むぞ。▼");
         scan.nextLine();
-        System.out.println("1. " + wepon_theElderWand.GetName() + ", 2. 回復アイテム");
+        System.out.println("1. " + weapon_theElderWand.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
-            TheDisaster.EquipWeapon(wepon_theElderWand);
+            TheDisaster.EquipWeapon(weapon_theElderWand);
         } else {
             TheDisaster.Healer(heal_medium);
         }
@@ -368,9 +359,9 @@ public class Story {
                 + "どちらを取るかを決めるのはお前『決意』だ。\n"
                 + "" + DisasterName + "はどちらを選ぶ？▼");
         scan.nextLine();
-        System.out.println("1. " + wepon_FryingPanOfMagic.GetName() + ", 2. 回復アイテム");
+        System.out.println("1. " + weapon_fryingPanOfMagic.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
-            TheDisaster.EquipWeapon(wepon_FryingPanOfMagic);
+            TheDisaster.EquipWeapon(weapon_fryingPanOfMagic);
         } else {
             TheDisaster.Healer(heal_medium);
         }
@@ -403,9 +394,9 @@ public class Story {
                 + "" + DisasterName + "にとって大事だと思う方を選んで欲しい。\n"
                 + "どちらを取るかを決めるのはお前だ。▼");
         scan.nextLine();
-        System.out.println("1. " + wepon_muskets.GetName() + ", 2. 回復アイテム");
+        System.out.println("1. " + weapon_muskets.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
-            TheDisaster.EquipWeapon(wepon_muskets);
+            TheDisaster.EquipWeapon(weapon_muskets);
         } else {
             TheDisaster.Healer(heal_high);
         }
@@ -505,9 +496,9 @@ public class Story {
                 + "選択の時間を行くぞ。\n"
                 + "ここからが本番だ。▼");
         scan.nextLine();
-        System.out.println("1. " + wepon_waterGun.GetName() + ", 2. 回復アイテム");
+        System.out.println("1. " + weapon_waterGun.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
-            TheDisaster.EquipWeapon(wepon_waterGun);
+            TheDisaster.EquipWeapon(weapon_waterGun);
         } else {
             TheDisaster.Healer(heal_veryHigh);
         }
