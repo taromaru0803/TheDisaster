@@ -1,82 +1,97 @@
 package thedisaster;
 
 import java.util.Random;
-import java.util.Scanner;
+import static thedisaster.TheDisaster.*;
 
 /**
- *
- * @author C0116168
+ * バトルに関する処理を行うクラス
+ * 
+ * @author 立野和紀 & 佐藤瑠星
  */
 public class Battle {
 
-    static Scanner scan = new Scanner(System.in);
-    static boolean end = false;
+    private static int turn = 1; //ターン
+    private static int physicalInvalidConunt = 0;
 
-    public static void main(String[] args) {
-        String str = "";
+    public static void BattleOfMessiah(Grim[] enemies) {
+        int damage;
+
+        for (Grim enemy : enemies) {
+            while (enemy.getHPg() > 0) {
+                System.out.println(enemy.getNameg() + "の攻撃");
+                damage = Damage("ENEMY");
+                Disaster.SetHP(-damage);
+
+                System.out.println(Disaster.getName() + "に " + damage + " のダメージ▼");
+                scan.nextLine();
+
+                /*Disasterの死亡確認が1秒ごとに行われる関係で、
+                下のif文を実行すると2回DisasterDead()が呼ばれることがあります。
+                 */
+ /*
+                if (Disaster.getHP() < 0) {
+                    DisasterDead();
+                }
+                 */
+                System.out.println(Disaster.getName() + "の行動");
+                damage = Damage("DISASTER");
+                enemy.SetHPg(-damage);
+
+                System.out.println(enemy.getNameg() + "に " + damage + " のダメージ▼");
+                scan.nextLine();
+            }
+            System.out.println(enemy.getNameg() + "は死亡した▼");
+            scan.nextLine();
+        }
+    }
+
+    public static void BattleOfGrimgerde() {
+        String GrimAi;
+        String disasterName = Disaster.getName();
+        String grimgerdeName = grimgerde.getNameg();
         int damage = 0;
 
-        do {
-            System.out.println("状況を番号で選択してください");
-            System.out.println("1.敵の行動  2.主人公の行動  9.ボスの行動  0.終了");
+        while (grimgerde.getHPg() > 0) {
+            System.out.println("ターン : " + turn);
 
-            str = scan.nextLine();
+            GrimAi = GRIMGERDEAI();
+            System.out.println(grimgerdeName + "は " + GrimAi + " を行った▼");
+            scan.nextLine();
 
-            switch (str) {
-                case "1":
-                    System.out.println("敵の行動!");
-                    damage = Damage("ENEMY");
-                    System.out.print("主人公に " + damage + " のダメージ!▼");
+            if (GrimAi.equals("物理無効")) {
+                System.out.println(disasterName + "の攻撃");
+                System.out.println("しかし、" + grimgerdeName + "は攻撃を弾いた▼");
+                scan.nextLine();
 
-                    scan.nextLine();
-                    System.out.println("");
+                turn++;
+                continue;
+            }
+
+            switch (GrimAi) {
+                case "物理攻撃":
+                    System.out.print("物理");
+                    damage = Damage("GRIMGERDEPhysical");
                     break;
-
-                case "2":
-                    System.out.println("主人公の行動!");
-                    damage = Damage("DISASTER");
-                    System.out.print("敵に " + damage + " のダメージ!▼");
-
-                    scan.nextLine();
-                    System.out.println("");
-                    break;
-
-                case "9":
-                    System.out.println("グリムゲルデの行動!");
-                    String grimAi = GRIMGERDEAI();
-                    System.out.print("グリムゲルデは " + grimAi + " を行った!");
-
-                    if (grimAi.equals("物理攻撃")) {
-                        damage = Damage("GRIMGERDEPhysical");
-                    } else if (grimAi.equals("魔法攻撃")) {
-                        damage = Damage("GRIMGERDEMagic");
-                    } else {
-                        System.out.print("▼");
-
-                        scan.nextLine();
-                        System.out.println("");
-                        break;
-                    }
-                    System.out.println("");
-                    System.out.print("主人公に " + damage + " のダメージ!▼");
-
-                    scan.nextLine();
-                    System.out.println("");
-                    break;
-
-                case "0":
-                    end = true;
-                    break;
-
-                default:
-                    System.out.println("半角数字1文字で正しく入力してください\n");
+                case "魔法攻撃":
+                    damage = Damage("GRIMGERDEMagic");
                     break;
             }
 
-        } while (!end);
+            System.out.println(disasterName + "に " + damage + " のダメージ▼");
+            scan.nextLine();
+
+            System.out.println(disasterName + "の攻撃");
+            damage = Damage("DISASTER");
+            grimgerde.SetHPg(-damage);
+
+            System.out.println(grimgerdeName + "に " + damage + " のダメージ▼");
+            scan.nextLine();
+
+            turn++;
+        }
     }
 
-    public static int Damage(String move) {
+    private static int Damage(String move) {
         Random rand = new Random();
 
         switch (move) {
@@ -84,31 +99,47 @@ public class Battle {
                 int ENEMYAttack = rand.nextInt(100);
                 return ENEMYAttack;
 
-            case "DISASTER":
-                int DISASTERAttack = rand.nextInt(7999) + 2000;
-                return DISASTERAttack;
-
             case "GRIMGERDEPhysical":
-                int GRIMGERDEPhysicalAttack = rand.nextInt(100) + 200;
-                return GRIMGERDEPhysicalAttack;
+                int GRIMGERDEPhysical = rand.nextInt(100) + 200;
+                return GRIMGERDEPhysical;
 
             case "GRIMGERDEMagic":
-                int GRIMGERDEMagicAttack = rand.nextInt(100) + 100;
-                return GRIMGERDEMagicAttack;
+                int GRIMGERDEMagic = rand.nextInt(100) + 100;
+                return GRIMGERDEMagic;
+
+            case "DISASTER":
+                int DISASTERAttack = rand.nextInt(7999) + 2000 + Disaster.getWepon().GetValue();
+                return DISASTERAttack;
         }
         return -1;
     }
 
     public static String GRIMGERDEAI() {
         Random rand = new Random();
-        int grimAi = rand.nextInt(99) + 1;
+        int GrimRandom = rand.nextInt(99) + 1;
 
-        if (grimAi <= 33) {
-            return "物理攻撃";
-        } else if (grimAi >= 67) {
+        if (turn == 1) {
+            physicalInvalidConunt++;
             return "物理無効";
-        } else {
-            return "魔法攻撃";
+        }
+
+        switch (physicalInvalidConunt) {
+            case 1:
+                physicalInvalidConunt = 0;
+                if (GrimRandom <= 50) {
+                    return "物理攻撃";
+                } else {
+                    return "魔法攻撃";
+                }
+            default:
+                if (GrimRandom <= 33) {
+                    return "物理攻撃";
+                } else if (GrimRandom >= 67) {
+                    physicalInvalidConunt++;
+                    return "物理無効";
+                } else {
+                    return "魔法攻撃";
+                }
         }
     }
 }
