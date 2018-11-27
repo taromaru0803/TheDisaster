@@ -1,23 +1,19 @@
-/*
- * 山口雄也
- */
 package thedisaster;
 
-import javafx.scene.input.KeyCode;
-
 /**
+ * キャラクターの名前、体力、使用している武器を設定・返すクラス
  *
- * @author c0116272
+ * @author 山口雄也
  */
 public class Character {
 
     //フィールド
     private String name;    //キャラクター名
     private int HP;      //体力
-    private String Wepon; //武器の名前
+    private Item Wepon; //武器の名前
 
     //コンストラクタ
-    public Character(String n, int h, String w) {
+    public Character(String n, int h, Item w) {
         this.name = n;
         this.HP = h;
         this.Wepon = w;
@@ -34,8 +30,12 @@ public class Character {
     }
 
     //フィールドweponを返すメソッド
-    public String getWepon() {
+    public Item getWepon() {
         return Wepon;
+    }
+
+    public void SetName(String n) {
+        this.name = n;
     }
 
     //HPをセットするメソッド
@@ -44,7 +44,7 @@ public class Character {
     }
 
     //Weponをセットするメソッド
-    public void SetWepon(String W) {
+    public void SetWepon(Item W) {
         this.Wepon = W;
     }
 }
