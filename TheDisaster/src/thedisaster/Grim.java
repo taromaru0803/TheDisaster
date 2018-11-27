@@ -2,7 +2,7 @@ package thedisaster;
 
 /**
  *
- * @author c0116272
+ * @author 山口雄也
  */
 public class Grim {
 
