@@ -18,6 +18,9 @@ public class Battle {
 
         for (Grim enemy : enemies) {
             while (enemy.getHPg() > 0) {
+                System.out.println(enemy.getNameg() + "が現れた▼");
+                scan.nextLine();
+                
                 System.out.println(enemy.getNameg() + "の攻撃");
                 damage = Damage("ENEMY");
                 Disaster.SetHP(-damage);
@@ -28,7 +31,7 @@ public class Battle {
                 /*Disasterの死亡確認が1秒ごとに行われる関係で、
                 下のif文を実行すると2回DisasterDead()が呼ばれることがあります。
                  */
- /*
+                /*
                 if (Disaster.getHP() < 0) {
                     DisasterDead();
                 }
