@@ -89,7 +89,7 @@ public class Story {
         scan.nextLine();
 
         System.out.println(""
-                + "逃げたいならこの画面を消してこの世界から去ればいい！\n"
+                + "逃げたいなら「Alt+F4」を押してこの画面を消してこの世界から去ればいい！\n"
                 + "さあどうする!!" + DisasterName + "よ！▼");
         scan.nextLine();
 
