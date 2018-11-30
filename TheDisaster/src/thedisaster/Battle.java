@@ -5,7 +5,7 @@ import static thedisaster.TheDisaster.*;
 
 /**
  * バトルに関する処理を行うクラス
- * 
+ *
  * @author 立野和紀 & 佐藤瑠星
  */
 public class Battle {
@@ -20,18 +20,18 @@ public class Battle {
             while (enemy.getHPg() > 0) {
                 System.out.println(enemy.getNameg() + "が現れた▼");
                 scan.nextLine();
-                
+
                 System.out.println(enemy.getNameg() + "の攻撃");
                 damage = Damage("ENEMY");
                 Disaster.SetHP(-damage);
 
-                System.out.println(Disaster.getName() + "に " + damage + " のダメージ▼");
+                System.out.println(Disaster.getName() + "に " + damage + " のダメージ▼ (残り : " + Disaster.getHP() + ")");
                 scan.nextLine();
 
                 /*Disasterの死亡確認が1秒ごとに行われる関係で、
                 下のif文を実行すると2回DisasterDead()が呼ばれることがあります。
                  */
-                /*
+ /*
                 if (Disaster.getHP() < 0) {
                     DisasterDead();
                 }
@@ -72,15 +72,16 @@ public class Battle {
 
             switch (GrimAi) {
                 case "物理攻撃":
-                    System.out.print("物理");
                     damage = Damage("GRIMGERDEPhysical");
                     break;
                 case "魔法攻撃":
                     damage = Damage("GRIMGERDEMagic");
                     break;
             }
-
-            System.out.println(disasterName + "に " + damage + " のダメージ▼");
+            
+            Disaster.SetHP(-damage);
+            
+            System.out.println(disasterName + "に " + damage + " のダメージ▼  (残り : " + Disaster.getHP() + ")");
             scan.nextLine();
 
             System.out.println(disasterName + "の攻撃");
@@ -123,7 +124,7 @@ public class Battle {
 
         if (turn == 1) {
             physicalInvalidConunt++;
-            return "物理無効";
+            return "シールド";
         }
 
         switch (physicalInvalidConunt) {
@@ -139,7 +140,7 @@ public class Battle {
                     return "物理攻撃";
                 } else if (GrimRandom >= 67) {
                     physicalInvalidConunt++;
-                    return "物理無効";
+                    return "";
                 } else {
                     return "魔法攻撃";
                 }
