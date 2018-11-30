@@ -110,6 +110,7 @@ public class TheDisaster {
             if (TwoChoices("1", "2").equals("2")) {
                 Story.specialVictory();
                 isGameEnd = true;
+                System.exit(0);
             }
         }
         Battle.BattleOfGrimgerde();
@@ -189,7 +190,7 @@ public class TheDisaster {
     public static void EasyMass() {
         System.out.println(""
                 + "※簡単な数学の問題が5問表示されます\n"
-                + "※回答を入力してください▼");
+                + "※半角数字で回答を入力してください▼");
         scan.nextLine();
 
         System.out.println(""
@@ -236,7 +237,7 @@ public class TheDisaster {
                         correct = false;
                     } else {
                         System.out.println("不正解");
-                        Disaster.SetHP(-10);
+                        Disaster.SetHP(-100);
                     }
                 } catch (Exception e) {
                 }
@@ -338,6 +339,7 @@ public class TheDisaster {
 
                 if (isGameEnd) {
                     timer.cancel();
+                    System.out.println("スコア : " + Disaster.getHP());
                     System.exit(0);
                 }
 
