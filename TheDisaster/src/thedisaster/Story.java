@@ -613,9 +613,7 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "C0116127 佐藤瑠星\n"
-                + "C0116168 立野和紀");
-        scan.nextLine();
-        System.out.println(""
+                + "C0116168 立野和紀\n"
                 + "C0116272 山口雄也\n"
                 + "C0116334 ザイダトゥル アクマル");
         scan.nextLine();
@@ -727,9 +725,7 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "C0116127 佐藤瑠星\n"
-                + "C0116168 立野和紀▼");
-        scan.nextLine();
-        System.out.println(""
+                + "C0116168 立野和紀\n"
                 + "C0116272 山口雄也\n"
                 + "C0116334 ザイダトゥル アクマル▼");
         scan.nextLine();
@@ -750,11 +746,15 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "事の顛末はあの戦乙女の予想を貴様が超えたことにより起こった。\n"
-                + "今回の災害騒動自体がなかったこととなった。▼");
+                + "それによって今回の災害騒動自体がなかったこととなった。▼");
         scan.nextLine();
         System.out.println(""
                 + "しかし、私はこれで満足している。\n"
-                + "あのダンジョンで私が殺さなかった兵士が私のことを残してくれた。▼");
+                + "素手ですら人を殺めてしまう私だが▼");
+        scan.nextLine();
+        System.out.println(""
+                + "本来武器になり得ないものを使うことで兵士を全滅させずに済んだ\n"
+                + "現にあのダンジョンで私が殺さなかった兵士が私のことを残してくれた。▼");
         scan.nextLine();
         System.out.println(""
                 + "いや私ではなく私たち、そう" + DisasterName + "のことを残してくれたのだ。\n"
