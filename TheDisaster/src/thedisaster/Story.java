@@ -11,9 +11,9 @@ public class Story {
 
     public static void Openning() {
         System.out.println(""
-                + "※このゲームではフルスクリーンを推奨しています。\n"
-                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます。\n"
-                + "※また、文の最後に「▼」が表示されている場合、Enterキーで次に進みます。▼");
+                + "※このゲームではフルスクリーンを推奨しています\n"
+                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます"
+                + "また、文の最後に「▼」が表示されている場合、Enterキーで次に進みます▼");
         scan.nextLine();
 
         System.out.print(""
@@ -809,21 +809,12 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "奴は貴様の意思によってのみ起こされる存在だからね。\n"
-                + "まあそんな不確定な存在をよくあのヴァルキリーは利用しようと思ったよな。▼");
+                + "そもそもこの騒動自体引き起こしたのはあんただ。▼");
         scan.nextLine();
 
         System.out.println(""
-                + "わざわざ使ったメサイアもポセイドンに寵愛されている海賊だしな。\n"
-                + "かつてゼウスの息子に立ち向かった海賊たちだからといって、無理あるよな…▼");
-        scan.nextLine();
-
-        System.out.println(""
-                + "まあ人間を蘇らせたらハデスにバレるから選択としては悪くないのかな。\n"
-                + "しかし海賊にこだわってポセイドンを敵に回さなくてもいいだろ…▼");
-        scan.nextLine();
-        System.out.println(""
-                + "スパモン教じゃあるまいし…\n"
-                + "で、そんな不確定な存在のあんたは何故ここへ来たんだい？▼");
+                + "で、\n"
+                + "そんなあんたが何をしにここに来た？▼");
         scan.nextLine();
     }
 
@@ -834,9 +825,11 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "あの災害と一緒だったとしても俺を攻略するのは無理だろうな。\n"
-                + "じゃあな。▼");
+                + "お前の自意識過剰なんじゃねえか？▼");
         scan.nextLine();
-
+        System.out.println(""
+                + "じゃあな▼");
+        scan.nextLine();
         System.out.println(""
                 + "あなたは1919361ダメージを受けた。▼");
         scan.nextLine();
@@ -845,17 +838,32 @@ public class Story {
     public static void Senpai2() {
         System.out.println(""
                 + "2か…。\n"
-                + "あの後世界は、とあるミームに汚染されたよ。▼");
+                + "奴の目的は単に人員補充だ。▼");
         scan.nextLine();
         System.out.println(""
-                + "そのミームは瞬く間に広がっていてね\n"
-                + "正直あの災害が出てこようが出てこなかろうが▼");
+                + "あんたが来ると見込んであのダンジョンでずっと待っていたんだ。\n"
+                + "まあそんな来るかどうか分からない▼");
         scan.nextLine();
         System.out.println(""
-                + "この世界は既に混沌に包まれていたってことさ。\n"
-                + "こんな答えでいいだろ？▼");
+                + "不確定な存在のあんたをよく利用しようと思ったよな。\n"
+                + "それにわざわざ使った兵士もポセイドンに寵愛されている海賊だしな。▼");
         scan.nextLine();
-
+System.out.println(""
+                + "かつてゼウスの息子に立ち向かった海賊たちだからといって\n"
+                + "無理あるよな…▼");
+        scan.nextLine();
+        System.out.println(""
+                + "まあ人間を蘇らせたらハデスにバレるから\n"
+                + "選択としては悪くないのかな。▼");
+        scan.nextLine();
+        System.out.println(""
+                + "それでも海賊にこだわってポセイドンを\n"
+                + "敵に回さなくてもいいだろ…▼");
+        scan.nextLine();
+        System.out.println(""
+                + "スパモン教じゃあるまいし…\n"
+                + "不確定なあんたにはこの程度の説明でいいだろ？▼");
+        scan.nextLine();
         System.out.println(""
                 + "じゃあな。\n"
                 + "あなたは1919361ダメージを受けた。▼");
@@ -868,15 +876,17 @@ public class Story {
                 + "俺は本名も性別も本当の顔も分からない正体不明な存在さ。▼");
         scan.nextLine();
         System.out.println(""
-                + "まあ既に存在そのものもどうでもよくなっているかもしれないな。\n"
-                + "いわゆるミーム（文化的遺伝子）ってことさ。▼");
+                + "誰も本当のことは分からない\n"
+                + "しかしみんな知っている▼");
         scan.nextLine();
-
         System.out.println(""
-                + "既にこの世界の一部は俺によって汚染をされている。\n"
-                + "おっと、これ以上の回答はやめておくよ。▼");
+                + "いわゆるミーム（文化的遺伝子）ってところだ。\n"
+                + "既に世界はこのミームに洗脳されている。▼");
         scan.nextLine();
-
+        System.out.println(""
+                + "おっと\n"
+                + "これ以上の回答はやめておくよ。▼");
+        scan.nextLine();
         System.out.println(""
                 + "じゃあな。\n"
                 + "あなたは1919361ダメージを受けた。▼");
@@ -886,11 +896,80 @@ public class Story {
     public static void Senpai4() {
         System.out.println(""
                 + "4を選んだか\n"
-                + "ここまでで相当萎えてるな?▼");
+                + "その願いは叶えてやれるか▼");
         scan.nextLine();
         System.out.println(""
-                + "\n"
-                + "");
+                + "どうせ他の選択肢を選んだ後に来たんだろ？\n"
+                + "どこまで俺も自分自身が耐えられるか疑問だったんだ。");
+        scan.nextLine();
+        System.out.println(""
+                + "†悔い改めて†\n"
+                + "ん？硬くなってんぜ？▼");
+        scan.nextLine();
+        System.out.println(""
+                + "すっげえ白くなってる\n"
+                + "はっきりわかんだね▼");
+        scan.nextLine();
+        System.out.println(""
+                + "見とけよ見とけよ～\n"
+                + "114514!!!▼");
         scan.nextLine();
     }
+    public static void SenpaiLast
+        System.out.println(""
+                + "ﾁｶﾚﾀ・・・（小声）\n"
+                + "まさかここまでやれるとはな…▼");
+        scan.nextLine();
+    System.out.println(""
+                + "ダメみたいですね（諦観）\n"
+                + "この辺にぃ▼");
+        scan.nextLine();
+    System.out.println(""
+                + "うまいラーメン屋の屋台、来てるらしいんすよ\n"
+                + "行きませんか？▼");
+        scan.nextLine();
+    System.out.println(""
+                + ".....\n"
+                + "あ、無視…▼");
+        scan.nextLine();
+    System.out.println(""
+                + "これもうわかんねぇな\n"
+                + "まあどうせ王道を往く俺はこの程度じゃやられないんですけどね▼");
+        scan.nextLine();
+    System.out.println(""
+                + "まああんたがこのゲームをここまでやり込んだということは\n"
+                + "それだけこのゲームを愛してくれたということだ。▼");
+        scan.nextLine();
+    System.out.println(""
+                + "一つのことを最後までやり遂げるって気持ちいいよな。\n"
+                + "それを今、お前はやり遂げた。▼");
+        scan.nextLine();
+    System.out.println(""
+                + "その功績を認めて\n"
+                + "最後に俺の名前を教えよう。▼");
+        scan.nextLine();
+    System.out.println(""
+                + "\n"
+                + "『オルトリンド』▼");
+        scan.nextLine();
+    System.out.println(""
+                + "これが俺の本当の名前だ。\n"
+                + "既に信仰も薄れているし、知名度も高くない▼");
+        scan.nextLine();
+    System.out.println(""
+                + "この世界に存在するために\n"
+                + "最も有名なミームを騙らせてもらった。▼");
+        scan.nextLine();
+    System.out.println(""
+                + "いや騙るなんてレベルじゃないな\n"
+                + "もはや俺はあのミームがないと存在すら▼");
+        scan.nextLine();
+    System.out.println(""
+                + "忘れられる存在になってしまった。\n"
+                + "これで本当にこのゲームは終わりだ。▼");
+        scan.nextLine();
+    System.out.println(""
+                + "\n"
+                + "じゃあな。▼");
+        scan.nextLine();
 }
