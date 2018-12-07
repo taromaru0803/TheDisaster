@@ -9,18 +9,25 @@ public class Item {
 
     private String name; //名前
     private int value; //値
+    private String AA; //AA
 
     /**
      * コンストラクタ
      *
      * @param n 名前
      * @param v 値
+     * @param a AA
      */
-    public Item(String n, int v) {
+    public Item(String n, int v,String a) {
         this.name = n;
         this.value = v;
+        this.AA = a;
     }
-
+    /**アスキーアートを返すメソッド
+    */
+    public void GetAA(){
+        return AA;
+    }
     /**
      * アイテムの名前を返すメソッド
      *
