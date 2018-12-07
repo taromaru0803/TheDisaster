@@ -124,18 +124,18 @@ public class TheDisaster {
      * 初期化
      */
     private static void init() {
-        heal_low = new Item("小回復", 20);
-        heal_medium = new Item("中回復", 40);
-        heal_high = new Item("大回復", 60);
-        heal_veryHigh = new Item("特大回復", 200);
+        heal_low = new Item("小回復", 20, ASCII_art.item());
+        heal_medium = new Item("中回復", 40, ASCII_art.item());
+        heal_high = new Item("大回復", 60, ASCII_art.item());
+        heal_veryHigh = new Item("特大回復", 200, ASCII_art.item());
 
-        weapon_bareHands = new Item("素手", 0);
-        weapon_knife = new Item("ナイフ", 10);
-        weapon_toyKnife = new Item("おもちゃのナイフ", 10);
-        weapon_fryingPanOfMagic = new Item("魔法のフライパン", 10);
-        weapon_theElderWand = new Item("ニワトコの杖", 10);
-        weapon_muskets = new Item("マスケット銃", 10);
-        weapon_waterGun = new Item("水鉄砲", 10);
+        weapon_bareHands = new Item("素手", 0,"");
+        weapon_knife = new Item("ナイフ", 10, ASCII_art.knife());
+        weapon_toyKnife = new Item("おもちゃのナイフ", 10, ASCII_art.toyknife());
+        weapon_fryingPanOfMagic = new Item("魔法のフライパン", 10, ASCII_art.frypan());
+        weapon_theElderWand = new Item("ニワトコの杖", 10, ASCII_art.elderwand());
+        weapon_muskets = new Item("マスケット銃", 10, ASCII_art.musketgun());
+        weapon_waterGun = new Item("水鉄砲", 10, ASCII_art.watergun());
 
         Disaster = new Character("", 1500, weapon_bareHands);
         grimgerde = new Grim("Grimgerde", 10000);
@@ -297,6 +297,7 @@ public class TheDisaster {
 
         if (TwoChoices("y", "n").equals("y")) {
             System.out.println(weponName + "を装備しました▼");
+            System.out.println(wepon.GetAA());
             Disaster.SetWepon(wepon);
 
             if (!hasGotWeapon_killWeapon) {
