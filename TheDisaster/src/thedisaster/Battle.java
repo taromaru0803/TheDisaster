@@ -61,7 +61,7 @@ public class Battle {
             System.out.println(grimgerdeName + "は " + GrimAi + " を行った▼");
             scan.nextLine();
 
-            if (GrimAi.equals("物理無効")) {
+            if (GrimAi.equals("シールド")) {
                 System.out.println(disasterName + "の攻撃");
                 System.out.println("しかし、" + grimgerdeName + "は攻撃を弾いた▼");
                 scan.nextLine();
@@ -84,6 +84,8 @@ public class Battle {
             System.out.println(disasterName + "に " + damage + " のダメージ▼  (残り : " + Disaster.getHP() + ")");
             scan.nextLine();
 
+            if(Disaster.getHP()>0){
+            
             System.out.println(disasterName + "の攻撃");
             damage = Damage("DISASTER");
             grimgerde.SetHPg(-damage);
@@ -92,6 +94,10 @@ public class Battle {
             scan.nextLine();
 
             turn++;
+            }else{
+               
+            System.out.println(DisasterName + "は死亡した");
+            System.exit(0);
         }
     }
 
