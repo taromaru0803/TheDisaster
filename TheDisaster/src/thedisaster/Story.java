@@ -915,7 +915,7 @@ System.out.println(""
                 + "114514!!!▼");
         scan.nextLine();
     }
-    public static void SenpaiLast
+    public static void SenpaiLast (){
         System.out.println(""
                 + "ﾁｶﾚﾀ・・・（小声）\n"
                 + "まさかここまでやれるとはな…▼");
@@ -972,4 +972,5 @@ System.out.println(""
                 + "\n"
                 + "じゃあな。▼");
         scan.nextLine();
+    }
 }
