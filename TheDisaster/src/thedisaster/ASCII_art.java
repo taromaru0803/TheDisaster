@@ -229,7 +229,7 @@ public class ASCII_art {
                 + "              jZyyyyyyyyyyWV \n"
                 + "              XZyyyyyyyyyWZ{\n"
                 + "                ??77TUWVyyZ\"\n"
-                + "???????\n";
+                + "懺悔の時は近い\n";
     }
 
     public static String knife() {
@@ -264,7 +264,7 @@ public class ASCII_art {
                 + "!  .Z1J!\n"
                 + ".i_($d:\n"
                 + "  (T5?\n"
-                + "?????????????????\n";
+                + "今までたくさんの人を傷つけてきた。\n";
     }
 
     public static String toyknife() {
@@ -300,7 +300,7 @@ public class ASCII_art {
                 + "                                  .T&+J++jJ7^              (:::+^\n"
                 + "                                                            D:J!\n"
                 + "                                                            (J\n"
-                + "?????????????????\n";
+                + "はたしてこれでよかったのだろうか？\n";
     }
 
     public static String frypan() {
@@ -329,7 +329,7 @@ public class ASCII_art {
                 + "      (4HHkkppfVVffVVVyyVWXQWmmmHY^\n"
                 + "          ?\"WHHHHggg@gg@HHMHY\"^\n"
                 + "                 ~????!\n"
-                + "????????????????\n";
+                + "本当は後悔しているのかもしれない\n";
     }
 
     public static String musketgun() {
@@ -344,7 +344,7 @@ public class ASCII_art {
                 + "  (@@H@@@@@MY\"\n"
                 + "  J@@@MY\"!?!\n"
                 + "  -\"\n"
-                + "??????????\n";
+                + "魔法も狩りもこれ一丁\n";
     }
 
     public static String elderwand() {
@@ -384,7 +384,7 @@ public class ASCII_art {
                 + "             .tw;\n"
                 + "           (1!  \n"
                 + "         .<?\n"
-                + "????????????????\n";
+                + "世界を敵に回した、怖いものはない\n";
     }
 
     public static String mail() {
