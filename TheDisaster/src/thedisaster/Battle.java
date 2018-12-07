@@ -78,26 +78,27 @@ public class Battle {
                     damage = Damage("GRIMGERDEMagic");
                     break;
             }
-            
+
             Disaster.SetHP(-damage);
-            
+
             System.out.println(disasterName + "に " + damage + " のダメージ▼  (残り : " + Disaster.getHP() + ")");
             scan.nextLine();
 
-            if(Disaster.getHP()>0){
-            
-            System.out.println(disasterName + "の攻撃");
-            damage = Damage("DISASTER");
-            grimgerde.SetHPg(-damage);
+            if (Disaster.getHP() > 0) {
 
-            System.out.println(grimgerdeName + "に " + damage + " のダメージ▼");
-            scan.nextLine();
+                System.out.println(disasterName + "の攻撃");
+                damage = Damage("DISASTER");
+                grimgerde.SetHPg(-damage);
 
-            turn++;
-            }else{
-               
-            System.out.println(DisasterName + "は死亡した");
-            System.exit(0);
+                System.out.println(grimgerdeName + "に " + damage + " のダメージ▼");
+                scan.nextLine();
+
+                turn++;
+            } else {
+
+                System.out.println(DisasterName + "は死亡した");
+                System.exit(0);
+            }
         }
     }
 

@@ -25,7 +25,7 @@ public class Item {
     }
     /**アスキーアートを返すメソッド
     */
-    public void GetAA(){
+    public String GetAA(){
         return AA;
     }
     /**
