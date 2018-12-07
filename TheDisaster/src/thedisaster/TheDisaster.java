@@ -110,7 +110,6 @@ public class TheDisaster {
             if (TwoChoices("1", "2").equals("2")) {
                 Story.specialVictory();
                 isGameEnd = true;
-                System.exit(0);
             }
         }
         Battle.BattleOfGrimgerde();
@@ -167,20 +166,26 @@ public class TheDisaster {
      * Disasterの名前を決定するメソッド
      */
     public static void PutDisasterName() {
-        boolean roop;
-        do {
-            roop = false;
-
+        boolean roop = false;
+        while(!roop){
             //netbeans環境では入力された日本語は文字化けする？みたいです。cmd上では正常表示されます
             System.out.println("災害(主人公)の名前を入力してください");
             DisasterName = scan.nextLine();
-
+            
+            switch (DisasterName){
+                case "名前" : 
+                    System.out.println("その名前は既に使われています");
+                    break;
+                case "":
+                    break;
+            }
+               
             System.out.println(DisasterName + " でよろしいですか? (y/n)");
 
-            if (TwoChoices("y", "n").equals("n")) {
+            if (TwoChoices("y", "n").equals("y")) {
                 roop = true;
             }
-        } while (roop);
+        }
         Disaster.SetName(DisasterName);
     }
 
