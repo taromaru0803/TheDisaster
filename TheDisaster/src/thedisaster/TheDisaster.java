@@ -174,42 +174,42 @@ public class TheDisaster {
             
             switch (DisasterName){
                 case "エクスシア" : 
-                    System.out.println("お前に名を貸す義理も無ければ道理もない。");
-                    break;
+                    System.out.println("\nお前に名を貸す義理も無ければ道理もない。\n");
+                    continue;
                 case "スローネ":
-                    System.out.println("その名を騙られるのは気乗りしないね。");
-                    break;
+                    System.out.println("\nその名を騙られるのは気乗りしないね。\n");
+                    continue;
                 case "マールート":
-                    System.out.println("残念、モウ先客ガ居ルノサ！");
-                    break;
+                    System.out.println("\n残念、モウ先客ガ居ルノサ！\n");
+                    continue;
                 case "ハールート":
-                    System.out.println("お前にその名は似合わないんじゃないか？");
-                    break;
+                    System.out.println("\nお前にその名は似合わないんじゃないか？\n");
+                    continue;
                 case "アストライアー":
-                    System.out.println("ハハッ、俺の名を知ってるとは光栄だね。");
-                    break;
+                    System.out.println("\nハハッ、俺の名を知ってるとは光栄だね。\n");
+                    continue;
                 case "ラジエル":
-                    System.out.println("ほぅ、よく覚えているものだな。");
-                    break;
+                    System.out.println("\nほぅ、よく覚えているものだな。\n");
+                    continue;
                 case "バーチュース":
-                    System.out.println("俺の名を騙ろうとするとは意外だね。");
-                    break;
+                    System.out.println("\n俺の名を騙ろうとするとは意外だね。\n");
+                    continue;
                 case "ガルム":
-                    System.out.println("名を覚えているのは誉めてやろう");
-                    break;
+                    System.out.println("\n名を覚えているのは誉めてやろう\n");
+                    continue;
                 case "グリムゲルデ":
-                    System.out.println("私の名前を騙るとはこの愚か者め");
-                    break;
+                    System.out.println("\n私の名前を騙るとはこの愚か者め\n");
+                    continue;
                 case "Star Dies":
-                    System.out.println("「8101919114514」\n"
-                            + "あなたは最も危険な名前を知った");
-                    break;
+                    System.out.println("\n「8101919114514」\n"
+                            + "あなたは最も危険な名前を知った\n");
+                    continue;
                 case "オルトランド":
-                    System.out.println("まだこのゲームをやってくれるのか？");
-                    break;
+                    System.out.println("\nまだこのゲームをやってくれるのか？\n");
+                    continue;
                 case "" : 
-                    System.out.println("名前を入力してください");
-                    break;
+                    System.out.println("\n名前を入力してください\n");
+                    continue;
             }
                
             System.out.println(DisasterName + " でよろしいですか? (y/n)");
