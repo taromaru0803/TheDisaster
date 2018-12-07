@@ -44,6 +44,8 @@ public class Battle {
                 scan.nextLine();
             }
             System.out.println(enemy.getNameg() + "は死亡した▼");
+            String AA = ASCII_art.shibou();
+            System.out.println(AA);
             scan.nextLine();
         }
     }
