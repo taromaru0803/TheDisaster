@@ -225,7 +225,7 @@ public static void watergun(){
 +"              jZyyyyyyyyyyWV \n" 
 +"              XZyyyyyyyyyWZ{\n" 
 +"                ??77TUWVyyZ\"\n" 
-+"\n"); 
++"懺悔の時は近い\n"); 
 }
 
 public static void knife(){
@@ -260,7 +260,7 @@ public static void knife(){
 +"!  .Z1J!\n"                                        
 +".i_($d:\n"                                  
 +"  (T5?\n"
-+"\n"); 
++"今までたくさんの人を傷つけてきた。\n"); 
 } 
 
 public static void toyknife(){
@@ -296,7 +296,7 @@ public static void toyknife(){
 +"                                  .T&+J++jJ7^              (:::+^\n"
 +"                                                            D:J!\n"
 +"                                                            (J\n"
-+"\n");
++"はたしてこれでよかったのだろうか？\n");
 }
 
 public static void frypan(){
@@ -325,7 +325,7 @@ public static void frypan(){
 +"      (4HHkkppfVVffVVVyyVWXQWmmmHY^\n"
 +"          ?\"WHHHHggg@gg@HHMHY\"^\n"
 +"                 ~????!\n"  
-+"\n");
++"本当は後悔しているのかもしれない\n");
 }
 
 public static void musketgun(){
@@ -340,7 +340,7 @@ public static void musketgun(){
 +"  (@@H@@@@@MY\"\n"                                                                                          
 +"  J@@@MY\"!?!\n"                                                                                         
 +"  -\"\n"
-+"\n");
++"魔法も狩りもこれ一丁\n");
 }
 
 public static void elderwand(){
@@ -380,7 +380,7 @@ public static void elderwand(){
 +"             .tw;\n"
 +"           (1!  \n"
 +"         .<?\n"
-+"\n");
++"世界を敵に回した、怖いものはない\n");
 }
 public static void mail(){
        System.out.println(""  
