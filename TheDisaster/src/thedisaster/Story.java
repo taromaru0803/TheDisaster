@@ -12,7 +12,8 @@ public class Story {
     public static void Openning() {
         System.out.println(""
                 + "※このゲームではフルスクリーンを推奨しています\n"
-                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます▼");
+                + "※最大化、あるいはF11キーでフルスクリーンにすることで、よりゲームを楽しめます"
+                + "また、文の最後に「▼」が表示されている場合、Enterキーで次に進みます▼");
         scan.nextLine();
 
         System.out.print(""
