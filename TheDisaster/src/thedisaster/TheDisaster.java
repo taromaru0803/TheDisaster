@@ -173,10 +173,38 @@ public class TheDisaster {
             DisasterName = scan.nextLine();
             
             switch (DisasterName){
-                case "名前" : 
-                    System.out.println("その名前は既に使われています");
+                case "エクスシア" : 
+                    System.out.println("お前に名を貸す義理も無ければ道理もない。");
                     break;
-                case "":
+                case "スローネ":
+                    System.out.println("その名を騙られるのは気乗りしないね。");
+                    break;
+                case "マールート":
+                    System.out.println("残念、モウ先客ガ居ルノサ！");
+                    break;
+                case "ハールート":
+                    System.out.println("お前にその名は似合わないんじゃないか？");
+                    break;
+                case "アストライアー":
+                    System.out.println("ハハッ、俺の名を知ってるとは光栄だね。");
+                    break;
+                case "ラジエル":
+                    System.out.println("ほぅ、よく覚えているものだな。");
+                    break;
+                case "スローネ":
+                    System.out.println("俺の名を騙ろうとするとは意外だね。");
+                    break;
+                case "ガルム":
+                    System.out.println("名を覚えているのは誉めてやろう");
+                    break;
+                case "グリムゲルデ":
+                    System.out.println("私の名前を騙るとはこの愚か者め");
+                    break;
+                case "Star Dies":
+                    System.out.println("「8101919114514」"\n+"あなたは最も危険な名前を知った");
+                    break;
+                case "オルトランド":
+                    System.out.println("まだこのゲームをやってくれるのか？");
                     break;
             }
                
