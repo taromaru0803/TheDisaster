@@ -718,7 +718,6 @@ public class Story {
                 + "私を英雄にさせろ！" + DisasterName + "！」▼\n"
                 + "");
         scan.nextLine();
-        System.out.println("エピローグ");
         System.out.println(""
                 + "\n"
                 + "制作スタッフ▼");
