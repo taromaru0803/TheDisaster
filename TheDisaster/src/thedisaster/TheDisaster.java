@@ -191,7 +191,7 @@ public class TheDisaster {
                 case "ラジエル":
                     System.out.println("ほぅ、よく覚えているものだな。");
                     break;
-                case "スローネ":
+                case "バーチュース":
                     System.out.println("俺の名を騙ろうとするとは意外だね。");
                     break;
                 case "ガルム":
@@ -201,10 +201,14 @@ public class TheDisaster {
                     System.out.println("私の名前を騙るとはこの愚か者め");
                     break;
                 case "Star Dies":
-                    System.out.println("「8101919114514」"\n+"あなたは最も危険な名前を知った");
+                    System.out.println("「8101919114514」\n"
+                            + "あなたは最も危険な名前を知った");
                     break;
                 case "オルトランド":
                     System.out.println("まだこのゲームをやってくれるのか？");
+                    break;
+                case "" : 
+                    System.out.println("名前を入力してください");
                     break;
             }
                
