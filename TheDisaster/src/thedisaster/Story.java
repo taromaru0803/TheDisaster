@@ -139,7 +139,7 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "今回の武器はナイフか。\n"
-                + "さあナイフと回復アイテムどちらを選ぶ？▼");
+                + "さあナイフと回復アイテムどちらを選ぶ？▼"+"(HP:"+Disaster.getHP() + ")");
         scan.nextLine();
         System.out.println("1. " + weapon_knife.GetName() + ", 2. 回復アイテム");
     }
@@ -331,7 +331,7 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "愚問だったな。私達" + DisasterName + "には敵などいない。\n"
-                + "武器かアイテムを拾って先に進むぞ。▼");
+                + "武器かアイテムを拾って先に進むぞ。▼"+"(HP:"+Disaster.getHP() + ")");
         scan.nextLine();
         System.out.println("1. " + weapon_theElderWand.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
@@ -367,7 +367,7 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "どちらを取るかを決めるのはお前『決意』だ。\n"
-                + "" + DisasterName + "はどちらを選ぶ？▼");
+                + "" + DisasterName + "はどちらを選ぶ？▼"+"(HP:"+Disaster.getHP() + ")");
         scan.nextLine();
         System.out.println("1. " + weapon_fryingPanOfMagic.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
@@ -404,7 +404,7 @@ public class Story {
 
         System.out.println(""
                 + "" + DisasterName + "にとって大事だと思う方を選んで欲しい。\n"
-                + "どちらを取るかを決めるのはお前だ。▼");
+                + "どちらを取るかを決めるのはお前だ。▼"+"(HP:"+Disaster.getHP() + ")");
         scan.nextLine();
         System.out.println("1. " + weapon_muskets.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
@@ -508,7 +508,7 @@ public class Story {
         scan.nextLine();
         System.out.println(""
                 + "選択の時間だ。行くぞ。\n"
-                + "ここからが本番だ。▼");
+                + "ここからが本番だ。▼"+"(HP:"+Disaster.getHP() + ")");
         scan.nextLine();
         System.out.println("1. " + weapon_waterGun.GetName() + ", 2. 回復アイテム");
         if (TheDisaster.TwoChoices("1", "2").equals("1")) {
